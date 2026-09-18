@@ -60,10 +60,13 @@ New to setting any of this up? Follow this guide first:
 ```bash
 cd labs/easy/lab-01
 terraform init
+terraform plan
 terraform apply
 ```
 
-Once applied, check the lab's `README.md` for the specific scenario and what to test. When you're done, always tear the lab down:
+Once applied, check the lab's `README.md` for the specific scenario and what to test. 
+
+When you're done, always tear the lab down to avoid incurring costs:
 
 ```bash
 terraform destroy

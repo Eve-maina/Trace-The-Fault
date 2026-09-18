@@ -14,13 +14,33 @@ The page does not load. Find out why and fix it.
 
 ## Getting started
 
+Move into the lab folder:
+
+```bash
+cd labs/easy/lab-01
+```
+
+Initialize Terraform (downloads the providers this config needs):
+
 ```bash
 terraform init
+```
+
+Preview the changes Terraform is about to make:
+
+```bash
 terraform plan
+```
+
+Apply the configuration and deploy the infrastructure:
+
+```bash
 terraform apply
 ```
 
 ## Cleanup
+
+Once done remember to tear down all the resources this lab created to avoid unnecessary costs:
 
 ```bash
 terraform destroy
