@@ -1,11 +1,9 @@
-# Lab 01 — Troubleshooting Hints
+# Lab 01 - Troubleshooting Hints
 
 Try working through the problem on your own first. Expand a hint only when you're stuck.
 
----
-
 <details>
-<summary>Step 1 — Confirm what's actually failing</summary>
+<summary>Step 1 - Confirm what's actually failing</summary>
 
 Try loading the URL from the `web_url` output in your browser, or from your terminal:
 
@@ -17,10 +15,8 @@ The request hangs and eventually times out. The instance is running, it has a pu
 
 </details>
 
----
-
 <details>
-<summary>Step 2 — Look at the security group</summary>
+<summary>Step 2 - Look at the security group</summary>
 
 Open the EC2 console, select the instance, and check its attached security group.
 
@@ -28,18 +24,14 @@ Go to the **Inbound rules** tab. How many rules are listed there?
 
 </details>
 
----
-
 <details>
-<summary>Step 3 — Understand what that means</summary>
+<summary>Step 3 - Understand what that means</summary>
 
 A security group with no inbound rules blocks all incoming traffic by default. It doesn't matter that outbound traffic is allowed, or that routing to the instance is otherwise correct. Without a rule explicitly permitting traffic in on port 80, any request from the internet gets dropped before it ever reaches the instance's operating system.
 
 Compare that to the outbound rule already present, notice it's the only rule in the group.
 
 </details>
-
----
 
 <details>
 <summary><strong>Ready for the fix? Click to reveal</strong></summary>

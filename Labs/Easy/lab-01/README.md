@@ -14,14 +14,14 @@ The page does not load. Find out why and fix it.
 
 ## Getting started
 
-\`\`\`bash
+```bash
 terraform init
 terraform plan
 terraform apply
-\`\`\`
+```
 
 ## Cleanup
 
-\`\`\`bash
+```bash
 terraform destroy
-\`\`\`
+```

@@ -6,13 +6,9 @@ Trace the Fault is a collection of intentionally broken AWS networking environme
 
 No answers are handed to you up front. Every lab includes a set of progressive hints if you get stuck, and a full walkthrough once you're ready to check your work.
 
----
-
 ## Why this exists
 
 Most tutorials show you how to build something that works. They rarely teach you how to figure out why something *doesn't*. Real-world AWS networking issues, timeouts, unreachable instances, broken peering, are diagnostic problems, not tutorial-following problems. Trace the Fault is built around that gap: you get infrastructure that's already deployed and already broken, and the skill being practiced is troubleshooting itself.
-
----
 
 ## How the labs are organized
 
@@ -50,8 +46,6 @@ Every lab folder includes:
 
 You can jump into any single lab folder and run it independently, you don't need to touch or even look at the other labs.
 
----
-
 ## Requirements
 
 - **Terraform** installed locally (v1.x or later)
@@ -60,8 +54,6 @@ You can jump into any single lab folder and run it independently, you don't need
 
 New to setting any of this up? Follow this guide first:
 **[Step-by-Step Guide to Setting Up Terraform, AWS CLI, and Your AWS Environment](https://medium.com/@eve.maina/step-by-step-guide-to-setting-up-terraform-aws-cli-and-your-aws-environment-fbc13143315d)**
-
----
 
 ## Running a lab
 
@@ -77,18 +69,12 @@ Once applied, check the lab's `README.md` for the specific scenario and what to 
 terraform destroy
 ```
 
----
-
 ## A note on the hints
 
 Try to solve each lab before opening `SOLUTION.md`. The hints are structured to guide your investigation step by step rather than hand you the answer immediately, expand one at a time, and only move to the next if you're genuinely stuck. The full fix is included at the end of every hint file once you're ready to check your work or compare your approach.
 
----
-
 ## Contributing / feedback
 
 This repo is a work in progress, more labs are being added across all three tiers. If you spot an issue with a lab or have a suggestion, feel free to open an issue.
-
----
 
 Built by [Eve Maina](https://www.linkedin.com/in/eve-maina/)
