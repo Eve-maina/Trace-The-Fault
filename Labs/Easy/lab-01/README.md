@@ -17,7 +17,7 @@ The page does not load. Find out why and fix it.
 Move into the lab folder:
 
 ```bash
-cd labs/easy/lab-01
+cd Labs/Easy/Lab-01
 ```
 
 Initialize Terraform (downloads the providers this config needs):

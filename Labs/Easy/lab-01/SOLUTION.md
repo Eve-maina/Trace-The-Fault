@@ -59,7 +59,7 @@ Save the file, then re-apply:
 terraform apply
 ```
 
-Re-test:
+Refresh the browser or Re-test:
 
 ```bash
 curl --max-time 5 http://<instance_public_dns>/
