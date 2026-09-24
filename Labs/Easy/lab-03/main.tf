@@ -25,7 +25,7 @@ resource "aws_vpc" "myvpc" {
 
 #Internet Gateway
 resource "aws_internet_gateway" "myigw" {
-  vpc_id = aws_vpc.myvpc.id
+  
     tags = {
       Name = "trace-the-fault-lab-03-igw"
     } 
@@ -46,7 +46,6 @@ resource "aws_subnet" "public" {
 #Route table
 resource "aws_route_table" "mypublicrt" {
     vpc_id = aws_vpc.myvpc.id
-
 
    tags = {
      Name = "trace-the-fault-lab03-public-route-table"
