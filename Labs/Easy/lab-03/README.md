@@ -1,8 +1,8 @@
-# Lab 02
+# Lab 03
 
 ## Scenario
 
-A web server has been deployed in a custom VPC using Terraform. The instance is running, the VPC has an internet gateway attached and the subnet is configured for public IP assignment.
+A web server has been deployed in a custom VPC using Terraform. The instance is running, it sits in the public subnet, the subnet is configured for public IP assignment and the security group allows HTTP in and all traffic out.
 
 Everything seems okay, turns out it's not
 
@@ -19,7 +19,7 @@ The page does not load. Find out why and fix it.
 Move into the lab folder:
 
 ```bash
-cd Labs/Easy/lab-02
+cd Labs/Easy/lab-03
 ```
 
 Initialize Terraform (downloads the providers this config needs):
