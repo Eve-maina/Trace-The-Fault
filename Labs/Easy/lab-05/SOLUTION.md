@@ -135,7 +135,7 @@ The first command should return an HTTP status line. The second should print the
 
 ## Why this happens
 
-A subnet is only "private" because its route table has no direct path to an internet gateway. That's the point, but it also means that traffic from the subnet can't reach the internet at all unless you give it another way. The internet gateway can't do it: it only translates addresses for instances that have a public IP, and private instances don't.
+A subnet is only "private" because its route table has no direct path to an internet gateway. That's the point, but it also means that traffic from the subnet can't reach the internet at all unless you give it a way to. The internet gateway can't do it: it only translates addresses for instances that have a public IP, and private instances don't.
 
 A NAT gateway fills that gap. It lives in a public subnet, has its own Elastic IP, and rewrites outbound traffic from private instances so it appears to come from that Elastic IP. Replies come back to the NAT gateway, which forwards them to the right instance. Nothing from the internet can start a connection in.
 
@@ -145,6 +145,5 @@ The full path out of a private subnet has three parts, and all of them have to e
 2. The NAT gateway sits in a **public** subnet and has an Elastic IP.
 3. That public subnet's route table sends `0.0.0.0/0` to an internet gateway attached to the VPC.
 
-In Lab 04 the NAT gateway existed but nothing routed to it. Here, parts 1 and 2 are missing entirely. Either way, you check each part of the path in order.
 
 </details>
