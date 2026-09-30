@@ -74,34 +74,9 @@ resource "aws_route_table_association" "public" {
   route_table_id = aws_route_table.public.id
 }
 
-resource "aws_eip" "nat" {
-  domain = "vpc"
-
-  tags = {
-    Name = "trace-the-fault-lab-05-nat-eip"
-  }
-}
-
-#NAT Gateway
-resource "aws_nat_gateway" "mynat" {
-  allocation_id = aws_eip.nat.id
-  subnet_id     = aws_subnet.public.id
-
-  tags = {
-    Name = "trace-the-fault-lab-05-nat"
-  }
-
-  depends_on = [aws_internet_gateway.myigw]
-}
-
 #Private route table
 resource "aws_route_table" "private" {
   vpc_id = aws_vpc.myvpc.id
-  
-  route {
-    cidr_block     = "0.0.0.0/0"
-    nat_gateway_id = aws_nat_gateway.mynat.id
-  }
 
   tags = {
     Name = "trace-the-fault-lab-05-private-route-table"
